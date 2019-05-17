@@ -178,10 +178,10 @@ int musico_alta(Musico array[], int size, int* contadorID, Orquesta arrayOrquest
             else
             {
                 array[posicion].IdOrquesta = auxOrquesta;
-            }
+
             utn_getUnsignedInt("\nIngrese tipo: \n1-Cuerdas\n2-viento-madera\n3-Viento-metal\n4-percusion\n ","\nError",1,sizeof(int),1,4,1,&array[posicion].IdInstrumento);
-            utn_getName("getName\n: ","\nError",1,TEXT_SIZE,1,array[posicion].nombre);
-            utn_getName("getName\n: ","\nError",1,TEXT_SIZE,1,array[posicion].apellido);
+            utn_getName("Ingrese nombre\n: ","\nError",1,TEXT_SIZE,1,array[posicion].nombre);
+            utn_getName("Ingrese apellido\n: ","\nError",1,TEXT_SIZE,1,array[posicion].apellido);
             printf("\n Posicion: %d\n ID: %d\n edad: %d\n IdOrquesta: %d\n IdInstrumento: %d\n nombre: %s\n apellido: %s",
                    posicion, array[posicion].idUnico,
                    array[posicion].edad,
@@ -190,6 +190,7 @@ int musico_alta(Musico array[], int size, int* contadorID, Orquesta arrayOrquest
                    array[posicion].nombre,
                    array[posicion].apellido);
             retorno=0;
+            }
         }
     }
     return retorno;
