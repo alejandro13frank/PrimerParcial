@@ -402,6 +402,7 @@ int instrumento_listar(Instrumento array[], int size)
 
 int instrumento_mostrarTipo(int tipoInstrumento)
 {
+    printf("\n");
     switch (tipoInstrumento)
     {
         case CUERDAS:

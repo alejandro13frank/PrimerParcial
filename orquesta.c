@@ -165,9 +165,9 @@ int orquesta_alta(Orquesta array[], int size, int* contadorID)
             (*contadorID)++;
             array[posicion].idUnico=*contadorID;
             array[posicion].isEmpty=0;
-            utn_getUnsignedInt("\nIngrese tipo de instrumento \n1-sinfonica\n2-filarmonica\n3-camara ","\nError",1,sizeof(int),1,3,1,&array[posicion].tipo);
-            utn_getName("\nIngrese nombre de orquesta: ","\nError",1,TEXT_SIZE,1,array[posicion].nombre);
-            utn_getName("\nIngrese lugar de orquesta: ","\nError",1,TEXT_SIZE,1,array[posicion].lugar);
+            utn_getUnsignedInt("\nIngrese tipo de instrumento \n1-sinfonica\n2-filarmonica\n3-camara \n","\nError",1,sizeof(int),1,3,1,&array[posicion].tipo);
+            utn_getTexto("\nIngrese nombre de orquesta: ","\nError",1,TEXT_SIZE,1,array[posicion].nombre);
+            utn_getTexto("\nIngrese lugar de orquesta: ","\nError",1,TEXT_SIZE,1,array[posicion].lugar);
             printf("\n Posicion: %d\n ID: %d\n tipo: %d\n nombre: %s\n lugar: %s",
                    posicion, array[posicion].idUnico,
                    array[posicion].tipo,
@@ -194,7 +194,7 @@ int orquesta_baja(Orquesta array[], int sizeArray,int *idBorrado)
     if(array!=NULL && sizeArray>0)
     {
         orquesta_listar(array,sizeArray);
-        utn_getUnsignedInt("\nID a cancelar: ","\nError",1,sizeof(int),1,&id);
+        utn_getUnsignedInt("\nID a cancelar: ","\nError",1,sizeof(int),0,30000,1,&id);
         if(orquesta_buscarID(array,sizeArray,id,&posicion)==-1)
         {
             printf("\nNo existe este ID");
@@ -403,6 +403,7 @@ int orquesta_listar(Orquesta array[], int size)
 }
 int orquesta_mostrarTipo(int tipoOrquesta)
 {
+    printf("\n");
     switch (tipoOrquesta)
     {
         case SINFONICA:
