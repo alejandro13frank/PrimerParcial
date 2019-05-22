@@ -409,3 +409,15 @@ int musico_listar(Musico array[], int size)
     return retorno;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+

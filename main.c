@@ -24,10 +24,17 @@ int main()
     Orquesta arrayOrquesta[QTY_ORQUESTA];
     Musico arrayMusico[QTY_MUSICO];
     Instrumento arrayInstrumento[QTY_INSTRUMENTO];
+
     orquesta_Inicializar(arrayOrquesta,QTY_ORQUESTA);
     musico_Inicializar(arrayMusico,QTY_MUSICO);
     instrumento_Inicializar(arrayInstrumento,QTY_INSTRUMENTO);
 
+    arrayOrquesta={{40,0,"poroto","alejandro 123",1},{41,0,"poroto1","alejandro 1231",1},{42,0,"poroto2","alejan 3123",2},{43,0,"poroto3","alejandro 431",3}};
+    arrayMusico={{50,0,"ale","alejads",20,43,2},
+                {51,0,"ale1","alejads",20,43,2},
+                {52,0,"ale2","alejads",20,43,2},
+                {53,0,"ale3","alejads",20,43,2}};
+    arrayInstrumento ={{2,0,"flauta",2}};
     do
     {
         utn_getUnsignedInt("\n\n1) Alta orquesta\n2) Eliminar Orquesta \n3)Listar Orquesta \n4) Musico Alta \n5) Musico modificar\n6) Musico baja\n7) Imprimir musicos\n8) ALta instrumento\n9) Listar instrumentos \n10) Salir\n",

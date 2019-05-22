@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1558554142 source:/home/alejandro/PrimerParcial/informes.c
+
+1558553471 source:/home/alejandro/PrimerParcial/instrumento.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"instrumento.h"
+
+1558553471 /home/alejandro/PrimerParcial/utn.h
+
+1558553471 /home/alejandro/PrimerParcial/instrumento.h
+
