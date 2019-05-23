@@ -169,8 +169,8 @@ int main()
                     informe_mostrarOrquestaCompleta(arrayOrquesta,QTY_ORQUESTA,
                                     arrayMusico,QTY_MUSICO,
                                     arrayInstrumento,QTY_INSTRUMENTO);
-                    int informe_orquestaMasMusicos(arrayOrquesta,QTY_ORQUESTA,
-                                    arrayMusicos,QTY_MUSICO);
+                    informe_orquestaMasMusicos(arrayOrquesta,QTY_ORQUESTA,
+                                    arrayMusico,QTY_MUSICO);
             case 10://Salir
                 break;
             default:
