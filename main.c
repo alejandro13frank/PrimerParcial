@@ -19,14 +19,22 @@ int main()
     int contadorIdOrquesta=0;
     int contadorIdMusico=0;
     int contadorIdInstrumento=0;
-    int i;
+    int h;
     Orquesta arrayOrquesta[QTY_ORQUESTA];
     Musico arrayMusico[QTY_MUSICO];
     Instrumento arrayInstrumento[QTY_INSTRUMENTO];
 
-    for (i=0;i<QTY_ORQUESTA;i++)
+    for (h=0;h<QTY_ORQUESTA;h++)
     {
-        arrayOrquesta[i].isEmpty=1;
+        arrayOrquesta[h].isEmpty=1;
+    }
+    for (h=0;h<QTY_INSTRUMENTO;h++)
+    {
+        arrayInstrumento[h].isEmpty=1;
+    }
+    for (h=0;h<QTY_MUSICO;h++)
+    {
+        arrayMusico[h].isEmpty=1;
     }
     //orquesta_Inicializar(arrayOrquesta,QTY_ORQUESTA);
     //musico_Inicializar(arrayMusico,QTY_MUSICO);
@@ -59,8 +67,8 @@ int main()
 */
     arrayOrquesta[1].idUnico=1;
     arrayOrquesta[1].isEmpty=0;
-    //strncpy(arrayOrquesta[1].nombre,"Orquesta1",sizeof(arrayOrquesta[1].nombre));
-    //strncpy(arrayOrquesta[1].lugar,"Lugar1",sizeof(arrayOrquesta[4].lugar));
+    strncpy(arrayOrquesta[1].nombre,"Orquesta1",sizeof(arrayOrquesta[1].nombre));
+    strncpy(arrayOrquesta[1].lugar,"Lugar1",sizeof(arrayOrquesta[4].lugar));
     arrayOrquesta[1].tipo=1;
 /*
     arrayOrquesta[2].idUnico=2;
@@ -160,18 +168,23 @@ int main()
             case 5://modificar musico
                 musico_modificar(arrayMusico,QTY_MUSICO,arrayOrquesta,QTY_ORQUESTA);
                 break;
+
             case 6://eliminar musico
                 musico_baja(arrayMusico,QTY_MUSICO);
                 break;
+
             case 7://imprimir musicos
                 musico_listar(arrayMusico,QTY_MUSICO);
                 break;
+
             case 8://alta instrumento
                 instrumento_alta(arrayInstrumento,QTY_INSTRUMENTO,&contadorIdInstrumento);
                 break;
+
             case 9://imprimir musicos
                 instrumento_listar(arrayInstrumento,QTY_INSTRUMENTO);
                 break;
+
             case 11://INFORMES
                     printf("\nOK INFORMES");
                     //informe_mostrarOrquestaMasCincoMusicos(arrayOrquesta,QTY_ORQUESTA,arrayMusico,QTY_MUSICO);
@@ -179,18 +192,14 @@ int main()
                                       //  arrayOrquesta,QTY_ORQUESTA,
                                       //  arrayInstrumento,QTY_INSTRUMENTO);
                     informe_imprimirPorLugar(arrayOrquesta, QTY_ORQUESTA);
-                    informe_mostrarOrquestaCompleta(arrayOrquesta,QTY_ORQUESTA,
-                                    arrayMusico,QTY_MUSICO,
-                                    arrayInstrumento,QTY_INSTRUMENTO);
-                    informe_orquestaMasMusicos(arrayOrquesta,QTY_ORQUESTA,
-                                    arrayMusico,QTY_MUSICO);
+                    /*informe_mostrarOrquestaCompleta(arrayOrquesta,QTY_ORQUESTA,arrayMusico,QTY_MUSICO,arrayInstrumento,QTY_INSTRUMENTO);
+                    informe_orquestaMasMusicos(arrayOrquesta,QTY_ORQUESTA,arrayMusico,QTY_MUSICO);*/
                     break;
             case 10://Salir
                 break;
             default:
                 printf("\nOpcion no valida");
         }
-        fflush(stdin);
     }
     while(opcion!=10); //
     return 0;

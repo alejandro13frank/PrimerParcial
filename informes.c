@@ -120,7 +120,7 @@ int informe_mostrarOrquestaCompleta(Orquesta *arrayOrquesta, int sizeOrquesta,
     int j;
     int cantCuerdas=0;
     int cantViento=0;
-    int cantPercusion;
+    int cantPercusion=0;
     if (arrayOrquesta!=NULL && arrayMusicos!=NULL && sizeMusico>0 && sizeOrquesta>0 && sizeInstrumento>0 && arrayInstrumento!=NULL)
     {
         for (i=0;i<sizeOrquesta;i++)
@@ -128,7 +128,8 @@ int informe_mostrarOrquestaCompleta(Orquesta *arrayOrquesta, int sizeOrquesta,
             if(arrayOrquesta[i].isEmpty)
             {
                 continue;
-            }else
+            }
+            else
             {
                 for(j=0;j<sizeMusico;j++)
                 {
