@@ -5,6 +5,7 @@
 #include "instrumento.h"
 #include "musico.h"
 #include "orquesta.h"
+#include <stdio_ext.h>
 
 int informe_mostrarOrquestaMasCincoMusicos(Orquesta *arrayOrquesta, int sizeOrquesta, Musico *arrayMusicos, int sizeMusico)
 {
@@ -51,7 +52,6 @@ int informe_mostrarOrquestaMasCincoMusicos(Orquesta *arrayOrquesta, int sizeOrqu
 int informe_mostrarMusicoMastreintaAno(Musico *arrayMusicos, int sizeMusico,
                                         Orquesta *arrayOrquesta, int sizeOrquesta,
                                         Instrumento *arrayInstrumento, int sizeInstrumento)
-
 {
     int retorno =-1;
     int i;
@@ -88,19 +88,22 @@ int informe_imprimirPorLugar(Orquesta *arrayOrquesta, int sizeOrquesta)
     char auxLugar[20];
     if (arrayOrquesta!=NULL && sizeOrquesta>0)
     {
-        utn_getName("\nIngrese lugar: ","\nError",1,20,1,auxLugar);
+        utn_getTexto("\nIngrese lugar a buscar: ","\nError",1,20,1,auxLugar);
         for(i=0;i<sizeOrquesta;i++)
         {
             if(arrayOrquesta[i].isEmpty)
             {
                 continue;
-            }else if (strncmp(arrayOrquesta[i].lugar,auxLugar,sizeof(arrayOrquesta[i].lugar))==0)
+            }
+            else if (strncmp(arrayOrquesta[i].lugar,auxLugar,sizeof(arrayOrquesta[i].lugar))==0)
             {
-                    printf("\n");
-                    printf("\n Id orquesta tiene mas de 5 music: %d",arrayOrquesta[i].idUnico);
-                    printf("\n nombre orquesta: %s",arrayOrquesta[i].nombre);
-                    printf("\n lugar orquesta: %s",arrayOrquesta[i].lugar);
+                    //printf("\n");
+                    //printf("\n Id orquesta: %d",arrayOrquesta[i].idUnico);
+                    //printf("\n nombre orquesta: %s",arrayOrquesta[i].nombre);
+                    //printf("\n lugar orquesta: %s",arrayOrquesta[i].lugar);
+                    //printf("\n Llegue hasta aca1");
                     orquesta_mostrarTipo(arrayOrquesta[i].tipo);
+                    printf("\n Llegue hasta aca2");
             }
         }
         retorno =0;

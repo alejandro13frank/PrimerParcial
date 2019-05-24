@@ -5,8 +5,6 @@
 #include "orquesta.h"
 #include "instrumento.h"
 #include "musico.h"
-
-
 /** \brief  To indicate that all position in the array are empty,
 *          this function put the flag (isEmpty) in TRUE in all
 *          position of the array
@@ -18,11 +16,12 @@
 int musico_Inicializar(Musico array[], int size)
 {
     int retorno=-1;
+    int i;
     if(array!= NULL && size>0)
     {
-        for(;size>0;size--)
+        for(i=0;i<size;size++)
         {
-            array[size-1].isEmpty=1;
+            array[i].isEmpty=1;
         }
         retorno=0;
     }

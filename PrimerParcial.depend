@@ -12,7 +12,7 @@
 
 1558553471 /home/alejandro/PrimerParcial/instrumento.h
 
-1558568684 source:/home/alumno/Documentos/PrimerParcial/informes.c
+1558655648 source:/home/alumno/Documentos/PrimerParcial/informes.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
@@ -20,24 +20,25 @@
 	"instrumento.h"
 	"musico.h"
 	"orquesta.h"
+	<stdio_ext.h>
 
-1558561075 /home/alumno/Documentos/PrimerParcial/utn.h
+1558652243 /home/alumno/Documentos/PrimerParcial/utn.h
 
-1558561075 /home/alumno/Documentos/PrimerParcial/instrumento.h
+1558652243 /home/alumno/Documentos/PrimerParcial/instrumento.h
 
-1558561075 /home/alumno/Documentos/PrimerParcial/musico.h
+1558652243 /home/alumno/Documentos/PrimerParcial/musico.h
 	"orquesta.h"
 
-1558561075 /home/alumno/Documentos/PrimerParcial/orquesta.h
+1558652243 /home/alumno/Documentos/PrimerParcial/orquesta.h
 
-1558561075 source:/home/alumno/Documentos/PrimerParcial/instrumento.c
+1558652243 source:/home/alumno/Documentos/PrimerParcial/instrumento.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
 	"utn.h"
 	"instrumento.h"
 
-1558561075 source:/home/alumno/Documentos/PrimerParcial/musico.c
+1558653520 source:/home/alumno/Documentos/PrimerParcial/musico.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
@@ -45,4 +46,34 @@
 	"orquesta.h"
 	"instrumento.h"
 	"musico.h"
+
+1558655535 source:/home/alumno/Documentos/PrimerParcial/main.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"informes.h"
+	"utn.h"
+	"instrumento.h"
+	"musico.h"
+	"orquesta.h"
+	<stdio_ext.h>
+
+1558652243 /home/alumno/Documentos/PrimerParcial/informes.h
+	"instrumento.h"
+	"musico.h"
+	"orquesta.h"
+
+1558655744 source:/home/alumno/Documentos/PrimerParcial/orquesta.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"musico.h"
+	"orquesta.h"
+
+1558653858 source:/home/alumno/Documentos/PrimerParcial/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
 

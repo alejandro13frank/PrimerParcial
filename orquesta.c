@@ -17,11 +17,12 @@
 int orquesta_Inicializar(Orquesta array[], int size)
 {
     int retorno=-1;
+    int i;
     if(array!= NULL && size>0)
     {
-        for(;size>0;size--)
+        for(i=0;i<size;size++)
         {
-            array[size-1].isEmpty=1;
+            array[i].isEmpty=1;
         }
         retorno=0;
     }
