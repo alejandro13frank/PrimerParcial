@@ -4,7 +4,9 @@
 #include "musico.h"
 #include "orquesta.h"
 
-int informe_mostrarOrquestaMasCincoMusicos(Orquesta *arrayOrquesta, int sizeOrquesta, Musico *arrayMusicos, int sizeMusico);
+int informe_mostrarOrquestaMasCincoMusicos(Orquesta *arrayOrquesta, int sizeOrquesta,
+                                           Musico *arrayMusicos, int sizeMusico);
+
 int informe_mostrarMusicoMastreintaAno(Musico *arrayMusicos, int sizeMusico,
                                         Orquesta *arrayOrquesta, int sizeOrquesta,
                                         Instrumento *arrayInstrumento, int sizeInstrumento);
@@ -18,5 +20,7 @@ int informe_mostrarOrquestaCompleta(Orquesta *arrayOrquesta, int sizeOrquesta,
 int informe_orquestaMasMusicos(Orquesta *arrayOrquesta, int sizeOrquesta,
                                     Musico *arrayMusicos, int sizeMusico);
 
+int informe_musicosDeCuerdas(Musico *arrayMusico, int sizeMusico,
+                             Instrumento *arrayInstrumento, int sizeInstrumento);
 
 #endif // INFORMES_H_INCLUDED

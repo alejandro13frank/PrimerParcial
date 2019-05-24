@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "utn.h"
-#include "musico.h"
 #include "orquesta.h"
 
 
@@ -20,7 +19,7 @@ int orquesta_Inicializar(Orquesta array[], int size)
     int i;
     if(array!= NULL && size>0)
     {
-        for(i=0;i<size;size++)
+        for(i=0;i<size;i++)
         {
             array[i].isEmpty=1;
         }
@@ -408,13 +407,13 @@ int orquesta_mostrarTipo(int tipoOrquesta)
     switch (tipoOrquesta)
     {
         case SINFONICA:
-            printf("Tipo :Sinfonica");
+            printf(" Tipo :Sinfonica");
             break;
         case FILARMONICA:
-            printf("Tipo :Filarmonica");
+            printf(" Tipo :Filarmonica");
             break;
         case CAMARA:
-            printf("Tipo :Camara");
+            printf(" Tipo :Camara");
             break;
     }
     return 0;

@@ -1,16 +1,24 @@
 # depslib dependency file v1.0
-1558554142 source:/home/alejandro/PrimerParcial/informes.c
+1558722521 source:/home/alejandro/PrimerParcial/informes.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"instrumento.h"
+	"musico.h"
+	"orquesta.h"
+	<stdio_ext.h>
 
-1558553471 source:/home/alejandro/PrimerParcial/instrumento.c
+1558722521 source:/home/alejandro/PrimerParcial/instrumento.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
 	"utn.h"
 	"instrumento.h"
 
-1558553471 /home/alejandro/PrimerParcial/utn.h
+1558722521 /home/alejandro/PrimerParcial/utn.h
 
-1558553471 /home/alejandro/PrimerParcial/instrumento.h
+1558722521 /home/alejandro/PrimerParcial/instrumento.h
 
 1558655648 source:/home/alumno/Documentos/PrimerParcial/informes.c
 	<string.h>
@@ -72,6 +80,49 @@
 	"orquesta.h"
 
 1558653858 source:/home/alumno/Documentos/PrimerParcial/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1558722521 /home/alejandro/PrimerParcial/musico.h
+	"orquesta.h"
+
+1558722521 /home/alejandro/PrimerParcial/orquesta.h
+
+1558722521 source:/home/alejandro/PrimerParcial/main.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"instrumento.h"
+	"musico.h"
+	"orquesta.h"
+	"informes.h"
+
+1558722586 /home/alejandro/PrimerParcial/informes.h
+	"instrumento.h"
+	"musico.h"
+	"orquesta.h"
+
+1558722521 source:/home/alejandro/PrimerParcial/musico.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"orquesta.h"
+	"instrumento.h"
+	"musico.h"
+
+1558722521 source:/home/alejandro/PrimerParcial/orquesta.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"musico.h"
+	"orquesta.h"
+
+1558722521 source:/home/alejandro/PrimerParcial/utn.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

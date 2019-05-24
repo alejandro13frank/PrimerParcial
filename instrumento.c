@@ -19,7 +19,7 @@ int instrumento_Inicializar(Instrumento array[], int size)
     int i;
     if(array!= NULL && size>0)
     {
-        for(i=0;i<size;size++)
+        for(i=0;i<size;i++)
         {
             array[i].isEmpty=1;
         }
@@ -316,11 +316,12 @@ int instrumento_modificar(Instrumento array[], int sizeArray)
 * \return int Return (-1) si Error [largo no valido o NULL pointer] - (0) si se ordena exitosamente
 *
 *//*
-int instrumento_ordenarPorString(Instrumento array[],int size)
+int instrumento_ordenarPorApellido(Instrumento array[],int size)
 {
     int retorno=-1;
-    int i, j;
-    char bufferString1[TEXT_SIZE];
+    int i;
+    int j;
+    char bufferApellido[TEXT_SIZE];
     int bufferId;
     int bufferIsEmpty;
 
@@ -332,7 +333,7 @@ int instrumento_ordenarPorString(Instrumento array[],int size)
     {
         for (i = 1; i < size; i++)
         {
-            strcpy(bufferString1,array[i].nombre);
+            strncpy(bufferApellido,array[i].apellido,sizeof(array[i].apellido));
             bufferId=array[i].idUnico;
             bufferIsEmpty=array[i].isEmpty;
 
@@ -342,34 +343,34 @@ int instrumento_ordenarPorString(Instrumento array[],int size)
 
 
             j = i - 1;
-            while ((j >= 0) && strcmp(bufferString1,array[j].nombre)<0)
+            while ((j >= 0) && strcmp(bufferApellido,array[j].apellido)<0)
             {
-                strcpy(array[j + 1].nombre,array[j].nombre);
+                strncpy(array[j + 1].apellido,array[j].apellido,sizeof(array[j + 1].apellido));
                 array[j + 1].idUnico=array[j].idUnico;
                 array[j + 1].isEmpty=array[j].isEmpty;
 
                 array[j + 1].tipo=array[j].tipo;
                 array[j + 1].varFloat1=array[j].varFloat1;
-                strcpy(array[j + 1].varString2,array[j].varString2);
+                strncpy(array[j + 1].varString2,array[j].varString2,sizeof(array[j + 1].varString2));
 
                 j--;
             }
-            strcpy(array[j + 1].nombre,bufferString1);
+            strncpy(array[j + 1].apellido,bufferApellido,sizeof(array[j + 1].apellido));
             array[j + 1].idUnico=bufferId;
             array[j + 1].isEmpty=bufferIsEmpty;
 
             array[j + 1].tipo=bufferInt;
             array[j + 1].varFloat1=bufferFloat;
-            strcpy(array[j + 1].varString2,bufferString2);
+            strncpy(array[j + 1].varString2,bufferString2,sizeof(array[j + 1].varString2));
         }
         retorno=0;
     }
     return retorno;
 }
-
+*/
 
 //Listar
- \brief Lista los elementos de un array
+/** \brief Lista los elementos de un array
 * \param array instrumento Array de instrumento
 * \param size int Tamaño del array
 * \return int Return (-1) si Error [largo no valido o NULL pointer] - (0) si se lista exitosamente
@@ -407,16 +408,16 @@ int instrumento_mostrarTipo(int tipoInstrumento)
     switch (tipoInstrumento)
     {
         case CUERDAS:
-            printf("Tipo :Cuerdas");
+            printf(" Tipo :Cuerdas");
             break;
         case VIENTO_MADERA:
-            printf("Tipo :viento madera");
+            printf(" Tipo :viento madera");
             break;
         case VIENTO_METAL:
-            printf("Tipo :viento metal");
+            printf(" Tipo :viento metal");
             break;
         case PERCUSION:
-            printf("Tipo :percusion");
+            printf(" Tipo :percusion");
             break;
     }
     return 0;

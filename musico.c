@@ -19,7 +19,7 @@ int musico_Inicializar(Musico array[], int size)
     int i;
     if(array!= NULL && size>0)
     {
-        for(i=0;i<size;size++)
+        for(i=0;i<size;i++)
         {
             array[i].isEmpty=1;
         }
@@ -325,58 +325,63 @@ int musico_modificar(Musico array[], int sizeArray,Orquesta arrayOrquesta[],int 
 * \param size int Tamaño del array
 * \return int Return (-1) si Error [largo no valido o NULL pointer] - (0) si se ordena exitosamente
 *
-*//*
-int musico_ordenarPorString(Musico array[],int size)
+*/
+int musico_ordenarPorApellido(Musico array[],int size)
 {
     int retorno=-1;
-    int i, j;
-    char bufferString1[TEXT_SIZE];
+    int i;
+    int j;
+    char bufferApellido[TEXT_SIZE];
     int bufferId;
     int bufferIsEmpty;
 
-    int bufferInt;
-    float bufferFloat;
-    char bufferString2[TEXT_SIZE];
+    int bufferEdad;
+    int bufferIdInstrumento;
+    int bufferIdOrquesta;
+    char bufferNombre[TEXT_SIZE];
 
     if(array!=NULL && size>=0)
     {
-        for (i = 1; i < size; i++)
+        for (i=1;i<size;i++)
         {
-            strcpy(bufferString1,array[i].nombre);
+            strncpy(bufferApellido,array[i].apellido,sizeof(array[i].apellido));
             bufferId=array[i].idUnico;
             bufferIsEmpty=array[i].isEmpty;
 
-            bufferInt=array[i].edad;
-            bufferFloat=array[i].varFloat1;
-            strcpy(bufferString2,array[i].apellido);
+            bufferEdad=array[i].edad;
+            bufferIdInstrumento=array[i].IdInstrumento;
+            bufferIdOrquesta=array[i].IdOrquesta;
+            strcpy(bufferNombre,array[i].nombre);
 
 
             j = i - 1;
-            while ((j >= 0) && strcmp(bufferString1,array[j].nombre)<0)
+            while ((j >= 0) && strcmp(bufferApellido,array[j].apellido)<0)
             {
-                strcpy(array[j + 1].nombre,array[j].nombre);
+                strncpy(array[j + 1].apellido,array[j].apellido,sizeof(array[j + 1].apellido));
                 array[j + 1].idUnico=array[j].idUnico;
                 array[j + 1].isEmpty=array[j].isEmpty;
 
                 array[j + 1].edad=array[j].edad;
-                array[j + 1].varFloat1=array[j].varFloat1;
-                strcpy(array[j + 1].apellido,array[j].apellido);
+                array[j + 1].IdInstrumento=array[j].IdInstrumento;
+                array[j + 1].IdOrquesta=array[j].IdOrquesta;
+                strncpy(array[j + 1].nombre,array[j].nombre,sizeof(array[j + 1].nombre));
 
                 j--;
             }
-            strcpy(array[j + 1].nombre,bufferString1);
+            strncpy(array[j + 1].apellido,bufferApellido,sizeof(array[j + 1].apellido));
             array[j + 1].idUnico=bufferId;
             array[j + 1].isEmpty=bufferIsEmpty;
 
-            array[j + 1].edad=bufferInt;
-            array[j + 1].varFloat1=bufferFloat;
-            strcpy(array[j + 1].apellido,bufferString2);
+            array[j + 1].edad=bufferEdad;
+            array[j + 1].IdInstrumento=bufferIdInstrumento;
+            array[j + 1].IdOrquesta=bufferIdOrquesta;
+            strncpy(array[j + 1].nombre,bufferNombre,sizeof(array[j + 1].nombre));
         }
         retorno=0;
     }
     return retorno;
 }
-*/
+
 //*****************************************
 //Listar
 /** \brief Lista los elementos de un array
