@@ -65,11 +65,11 @@ int main()
     strncpy(arrayInstrumento[5].nombre,"inst5",sizeof(arrayInstrumento[5].nombre));
     arrayInstrumento[5].tipo=3;
 */
-    arrayOrquesta[1].idUnico=1;
-    arrayOrquesta[1].isEmpty=0;
-    strncpy(arrayOrquesta[1].nombre,"Orquesta1",sizeof(arrayOrquesta[1].nombre));
-    strncpy(arrayOrquesta[1].lugar,"Lugar1",sizeof(arrayOrquesta[4].lugar));
-    arrayOrquesta[1].tipo=1;
+    arrayOrquesta[0].idUnico=1;
+    arrayOrquesta[0].isEmpty=0;
+    //strncpy(arrayOrquesta[0].nombre,"Orquesta1",sizeof(arrayOrquesta[1].nombre));
+    strncpy(arrayOrquesta[0].lugar,"Lugar1",sizeof(arrayOrquesta[4].lugar));
+    arrayOrquesta[0].tipo=1;
 /*
     arrayOrquesta[2].idUnico=2;
     arrayOrquesta[2].isEmpty=0;
@@ -145,7 +145,7 @@ int main()
         utn_getUnsignedInt("\n\n1) Alta orquesta\n2) Eliminar Orquesta \n3)Listar Orquesta \n4) Musico Alta \n5) Musico modificar\n6) Musico baja\n7) Imprimir musicos\n8) ALta instrumento\n9) Listar instrumentos\n11) Informes\n \n10) Salir\n",
                       "\nError",1,sizeof(int),1,60,1,&opcion);
          */
-         opcion=11;
+        opcion=11;
         switch(opcion)
         {
             case 1: //Alta Orquesta
@@ -186,14 +186,14 @@ int main()
                 break;
 
             case 11://INFORMES
-                    printf("\nOK INFORMES");
+                    //printf("\nOK INFORMES");
                     //informe_mostrarOrquestaMasCincoMusicos(arrayOrquesta,QTY_ORQUESTA,arrayMusico,QTY_MUSICO);
                     //informe_mostrarMusicoMastreintaAno(arrayMusico,QTY_MUSICO,
                                       //  arrayOrquesta,QTY_ORQUESTA,
                                       //  arrayInstrumento,QTY_INSTRUMENTO);
                     informe_imprimirPorLugar(arrayOrquesta, QTY_ORQUESTA);
-                    /*informe_mostrarOrquestaCompleta(arrayOrquesta,QTY_ORQUESTA,arrayMusico,QTY_MUSICO,arrayInstrumento,QTY_INSTRUMENTO);
-                    informe_orquestaMasMusicos(arrayOrquesta,QTY_ORQUESTA,arrayMusico,QTY_MUSICO);*/
+                    informe_mostrarOrquestaCompleta(arrayOrquesta,QTY_ORQUESTA,arrayMusico,QTY_MUSICO,arrayInstrumento,QTY_INSTRUMENTO);
+                    informe_orquestaMasMusicos(arrayOrquesta,QTY_ORQUESTA,arrayMusico,QTY_MUSICO);
                     break;
             case 10://Salir
                 break;

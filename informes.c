@@ -89,6 +89,7 @@ int informe_imprimirPorLugar(Orquesta *arrayOrquesta, int sizeOrquesta)
     if (arrayOrquesta!=NULL && sizeOrquesta>0)
     {
         utn_getTexto("\nIngrese lugar a buscar: ","\nError",1,20,1,auxLugar);
+
         for(i=0;i<sizeOrquesta;i++)
         {
             if(arrayOrquesta[i].isEmpty)
@@ -141,6 +142,8 @@ int informe_mostrarOrquestaCompleta(Orquesta *arrayOrquesta, int sizeOrquesta,
                                 cantCuerdas++;
                                 break;
                             case VIENTO_MADERA:
+                                cantViento++;
+                                break;
                             case VIENTO_METAL:
                                 cantViento++;
                                 break;
@@ -164,7 +167,7 @@ int informe_mostrarOrquestaCompleta(Orquesta *arrayOrquesta, int sizeOrquesta,
 int informe_orquestaMasMusicos(Orquesta *arrayOrquesta, int sizeOrquesta,
                                     Musico *arrayMusicos, int sizeMusico)
 {
-    int retorno =-1;
+    int retorno =-1;/*
     int i;
     int j;
     int cantMaxMusicos=0;
@@ -187,7 +190,7 @@ int informe_orquestaMasMusicos(Orquesta *arrayOrquesta, int sizeOrquesta,
                         cantMusicos++;
                     }
                 }
-                if (flag==0 || cantMaxMusicos>cantMusicos)
+                if (flag==0 || cantMaxMusicos<cantMusicos)
                 {
                     cantMaxMusicos=cantMusicos;
                     orquestaMax=arrayOrquesta[i].idUnico;
@@ -201,6 +204,7 @@ int informe_orquestaMasMusicos(Orquesta *arrayOrquesta, int sizeOrquesta,
         printf("\n lugar orquesta: %s",arrayOrquesta[orquestaMax].lugar);
         orquesta_mostrarTipo(arrayOrquesta[orquestaMax].tipo);
         retorno=0;
-    }
+    }*/
     return retorno;
 }
+

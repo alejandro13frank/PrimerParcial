@@ -8,10 +8,13 @@ int informe_mostrarOrquestaMasCincoMusicos(Orquesta *arrayOrquesta, int sizeOrqu
 int informe_mostrarMusicoMastreintaAno(Musico *arrayMusicos, int sizeMusico,
                                         Orquesta *arrayOrquesta, int sizeOrquesta,
                                         Instrumento *arrayInstrumento, int sizeInstrumento);
+
 int informe_imprimirPorLugar(Orquesta *arrayOrquesta, int sizeOrquesta);
+
 int informe_mostrarOrquestaCompleta(Orquesta *arrayOrquesta, int sizeOrquesta,
                                     Musico *arrayMusicos, int sizeMusico,
                                     Instrumento *arrayInstrumento, int sizeInstrumento);
+
 int informe_orquestaMasMusicos(Orquesta *arrayOrquesta, int sizeOrquesta,
                                     Musico *arrayMusicos, int sizeMusico);
 
