@@ -26,4 +26,5 @@ int musico_bajaValorRepetidoInt(Musico array[], int sizeArray, int valorBuscado)
 int musico_modificar(Musico array[], int sizeArray,Orquesta arrayOrquesta[],int sizeOrquesta);
 int musico_ordenarPorApellido(Musico array[],int size);
 int musico_listar(Musico array[], int size);
+int musico_cantidadDeMusicos(Musico array[], int size);
 #endif // MUSICO_H_INCLUDED

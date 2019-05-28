@@ -16,6 +16,7 @@ int main()
 {
     int auxIdBorrado;
     int opcion;
+    char opcionInformes;
     int contadorIdOrquesta=0;
     int contadorIdMusico=0;
     int contadorIdInstrumento=0;
@@ -172,8 +173,52 @@ int main()
                 break;
 
             case 11://INFORMES
-                    printf("\nOK INFORMES");
-                    informe_mostrarOrquestaMasCincoMusicos(arrayOrquesta,QTY_ORQUESTA,
+                do
+                {
+                    utn_getChar("\nInformes: \nA \nB \nC \nD \nE \nF \nG \nH \nS(salir)","\nError",'A','Z',1,&opcionInformes);
+                    switch(opcionInformes)
+                    {
+                        case 'A':
+                            informe_mostrarOrquestaMasCincoMusicos(arrayOrquesta,QTY_ORQUESTA,
+                                                                    arrayMusico,QTY_MUSICO);
+                            break;
+                        case 'B':
+                            informe_mostrarMusicoMastreintaAno(arrayMusico,QTY_MUSICO,
+                                                        arrayOrquesta,QTY_ORQUESTA,
+                                                        arrayInstrumento,QTY_INSTRUMENTO);
+                            break;
+                        case 'C':
+                            informe_imprimirPorLugar(arrayOrquesta, QTY_ORQUESTA);
+                            break;
+                        case 'D':
+                            informe_mostrarOrquestaCompleta(arrayOrquesta,QTY_ORQUESTA,
+                                                            arrayMusico,QTY_MUSICO,
+                                                            arrayInstrumento,QTY_INSTRUMENTO);
+                            break;
+                        case 'E':
+                            informe_mostarMusicoPorUnaOrquesta(arrayOrquesta,QTY_ORQUESTA,
+                                                                arrayMusico,QTY_MUSICO,
+                                                                arrayInstrumento,QTY_INSTRUMENTO);
+                            break;
+                        case 'F':
+                            informe_orquestaMasMusicos(arrayOrquesta,QTY_ORQUESTA,
+                                                        arrayMusico,QTY_MUSICO);
+                            break;
+                        case 'G':
+                            informe_musicosDeCuerdas(arrayMusico,QTY_MUSICO,
+                                                    arrayInstrumento,QTY_INSTRUMENTO);
+                            break;
+                        case 'H':
+                            informe_promedioMusicosPorOrquesta(arrayOrquesta,QTY_ORQUESTA,
+                                                                arrayMusico,QTY_MUSICO);
+                            break;
+                        case 'S':
+                            break;
+                        default:
+                            printf("\nOpcion no valida");
+                    }
+                }while(opcionInformes!='S');
+                    /*informe_mostrarOrquestaMasCincoMusicos(arrayOrquesta,QTY_ORQUESTA,
                                                            arrayMusico,QTY_MUSICO);
                     informe_mostrarMusicoMastreintaAno(arrayMusico,QTY_MUSICO,
                                                         arrayOrquesta,QTY_ORQUESTA,
@@ -186,7 +231,12 @@ int main()
                                                arrayMusico,QTY_MUSICO);
                     informe_musicosDeCuerdas(arrayMusico,QTY_MUSICO,
                                             arrayInstrumento,QTY_INSTRUMENTO);
-                    break;
+                    informe_promedioMusicosPorOrquesta(arrayOrquesta,QTY_ORQUESTA,
+                                                       arrayMusico,QTY_MUSICO);
+                    informe_mostarMusicoPorUnaOrquesta(arrayOrquesta,QTY_ORQUESTA,
+                                                       arrayMusico,QTY_MUSICO,
+                                                       arrayInstrumento,QTY_INSTRUMENTO);*/
+                break;
             case 10://Salir
                 break;
             default:

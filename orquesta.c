@@ -390,7 +390,7 @@ int orquesta_listar(Orquesta array[], int size)
             }
             else
             {
-                printf("\n Posicion: %d\n ID: %d\n nombre: %s\n lugar: %s",
+                printf("\n\n Posicion: %d\n ID: %d\n nombre: %s\n lugar: %s",
                        i, array[i].idUnico,
                        array[i].nombre,
                        array[i].lugar);
@@ -417,4 +417,18 @@ int orquesta_mostrarTipo(int tipoOrquesta)
             break;
     }
     return 0;
+}
+
+int orquesta_cantidadDeOrquestas(Orquesta array[], int size)
+{
+    int i;
+    int cantidadDeOrquestas=0;
+    for (i=0;i<size;i++)
+    {
+        if (!array[i].isEmpty)
+        {
+            cantidadDeOrquestas++;
+        }
+    }
+    return cantidadDeOrquestas;
 }

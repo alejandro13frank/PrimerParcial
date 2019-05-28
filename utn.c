@@ -111,7 +111,7 @@ int utn_getUnsignedInt(  char* msg,char* msgError,int minSize,int maxSize,int mi
             if(!getString(msg,msgError,minSize,maxSize,&reintentos,bufferStr)&& (isValidNumber(bufferStr)==1)) //==0 sin errores !0
             {
                 aux=atoi(bufferStr);
-                if (aux>=min && aux<=max )
+                if (aux>=min && aux<=max)
                 {
                     *input=aux;
                     retorno=0;
