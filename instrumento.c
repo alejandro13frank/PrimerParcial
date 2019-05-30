@@ -72,9 +72,7 @@ int instrumento_buscarID(Instrumento array[], int size, int valorBuscado, int* p
     {
         for(i=0;i<size;i++)
         {
-            if(array[i].isEmpty==1)
-                continue;
-            else if(array[i].idUnico==valorBuscado)
+            if(!array[i].isEmpty && array[i].idUnico==valorBuscado)
             {
                 retorno=0;
                 *posicion=i;
@@ -402,6 +400,11 @@ int instrumento_listar(Instrumento array[], int size)
     return retorno;
 }
 
+/** \brief Muesta el tipo de intrumento en formato de texto por pantalla
+* \param tipoInstrumento int tipo del instrumento
+* \return int Return (0)
+*
+*/
 int instrumento_mostrarTipo(int tipoInstrumento)
 {
     printf("\n");

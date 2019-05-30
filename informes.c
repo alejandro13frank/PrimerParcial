@@ -108,6 +108,7 @@ int informe_mostrarOrquestaCompleta(Orquesta *arrayOrquesta, int sizeOrquesta,
     int retorno =-1;
     int i;
     int j;
+    int posicionInstrumento;
     int cantCuerdas;
     int cantViento;
     int cantPercusion;
@@ -123,9 +124,10 @@ int informe_mostrarOrquestaCompleta(Orquesta *arrayOrquesta, int sizeOrquesta,
                 cantPercusion=0;
                 for(j=0;j<sizeMusico;j++)
                 {
-                    if (arrayMusicos[j].isEmpty && arrayOrquesta[i].idUnico==arrayMusicos[j].IdOrquesta)
+                    if (!arrayMusicos[j].isEmpty && arrayOrquesta[i].idUnico==arrayMusicos[j].IdOrquesta)
                     {
-                        switch(arrayInstrumento[arrayMusicos[j].IdInstrumento].tipo)
+                        instrumento_buscarID(arrayInstrumento,sizeInstrumento,arrayMusicos[j].IdInstrumento,&posicionInstrumento);
+                        switch(arrayInstrumento[posicionInstrumento].tipo)
                         {
                             case CUERDAS:
                                 cantCuerdas++;
@@ -192,6 +194,7 @@ int informe_orquestaMasMusicos(Orquesta *arrayOrquesta, int sizeOrquesta,
                 printf("\n Id orquesta mas Musicos: %d",arrayOrquesta[i].idUnico);
                 printf("\n nombre orquesta: %s",arrayOrquesta[i].nombre);
                 printf("\n lugar orquesta: %s",arrayOrquesta[i].lugar);
+                printf("\n Cantidad de musicos: %d",arrayOrquesta[i].cantidadMusicos);
                 orquesta_mostrarTipo(arrayOrquesta[i].tipo);
             }
         }

@@ -401,6 +401,12 @@ int orquesta_listar(Orquesta array[], int size)
     }
     return retorno;
 }
+
+/** \brief Muestra el tipo de orquesta en forma de texto por pantalla.
+* \param tipoOrquesta int tipo de orquesta
+* \return int Return (0)
+*
+*/
 int orquesta_mostrarTipo(int tipoOrquesta)
 {
     printf("\n");
@@ -419,6 +425,12 @@ int orquesta_mostrarTipo(int tipoOrquesta)
     return 0;
 }
 
+/** \brief devuelve la cantidad de orquestas activas
+* \param array orquesta Array de orquesta
+* \param size int Tamaño del array
+* \return int Return (0) si no hay orquestas (>0) si encontro orquestas activas
+*
+*/
 int orquesta_cantidadDeOrquestas(Orquesta array[], int size)
 {
     int i;
